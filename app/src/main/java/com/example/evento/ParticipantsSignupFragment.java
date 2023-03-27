@@ -4,11 +4,13 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,6 +33,9 @@ public class ParticipantsSignupFragment extends Fragment {
 
         p_email = (TextInputLayout) view.findViewById(R.id.participants_signup_email);
         p_pass = (TextInputLayout) view.findViewById(R.id.participants_signup_password);
+        // Getting ARGUMENTS -
+        Bundle mBundle = getArguments();
+        String Role = mBundle.getString("Role");
 
         Button signup = view.findViewById(R.id.signup_participants_button);
         signup.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +63,30 @@ public class ParticipantsSignupFragment extends Fragment {
                             }
                         });
             }
+
         });
+
+        TextView already_account = view.findViewById(R.id.already_registered);
+        already_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Creating initial ListFragment -
+                ParticipantsLoginFragment mParticipantsLoginFragment = new ParticipantsLoginFragment();
+
+                // For Passing data from ShowActivty to ListFragment - using Bundle
+                Bundle mBundle = new Bundle();
+                mBundle.putString("Role", Role);
+                // Setting arguments -
+                mParticipantsLoginFragment.setArguments(mBundle);
+
+                // Doing Fragment Transaction
+                FragmentTransaction new_transaction = getFragmentManager().beginTransaction();
+                new_transaction.replace(R.id.participants_login_fragment_container, mParticipantsLoginFragment);
+                new_transaction.addToBackStack(null);
+                new_transaction.commit();
+            }
+        });
+
 
         return view;
     }

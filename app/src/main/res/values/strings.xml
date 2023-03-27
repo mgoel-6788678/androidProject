@@ -9,5 +9,7 @@
     <string name="login_volunteers">Login as Volunteers</string>
     <string name="signup_participants">Sign Up as Participants</string>
     <string name="login">Login</string>
-    <string name ="signup">SignUp</string>
+    <string name="signup">SignUp</string>
+    <string name="already_account">Already Registered?</string>
+    <string name="participant_dashboard">Participant Dashboard</string>
 </resources>
