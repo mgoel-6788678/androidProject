@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Evento</string>
+    <string name="choose_role">Choose Role</string>
+    <string name="participants">Participants</string>
+    <string name="volunteers">Volunteers</string>
+    <string name="organizers">Organizers</string>
 </resources>
