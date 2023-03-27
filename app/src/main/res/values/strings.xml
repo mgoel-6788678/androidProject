@@ -12,4 +12,5 @@
     <string name="signup">SignUp</string>
     <string name="already_account">Already Registered?</string>
     <string name="participant_dashboard">Participant Dashboard</string>
+    <string name="logout">Logout</string>
 </resources>
