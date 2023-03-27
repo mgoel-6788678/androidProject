@@ -13,7 +13,6 @@
         android:layout_marginStart="176dp"
         android:layout_marginEnd="177dp"
         android:layout_marginBottom="523dp"
-        android:fontFamily="@font/comfortaa"
         android:text="@string/app_title"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -24,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.677" />
 
+    <!--        android:fontFamily="@font/comfortaa"-->
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="265dp"
@@ -53,6 +53,20 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton"
         app:layout_constraintVertical_bias="0.125"
         app:srcCompat="@drawable/facebook_signin" />
+
+<!--    <com.facebook.login.widget.LoginButton-->
+<!--        android:id="@+id/imageButton2"-->
+<!--        android:layout_width="265dp"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:background="?android:selectableItemBackground"-->
+<!--        android:elevation="1dp"-->
+<!--        android:importantForAccessibility="no"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/imageButton"-->
+<!--        app:layout_constraintVertical_bias="0.125"/>-->
 
     <ImageButton
         android:id="@+id/imageButton3"
