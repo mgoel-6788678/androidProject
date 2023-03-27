@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
         Organizers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, ParticipantsLoginActiviy.class);
+                intent.putExtra("Role", "Organizers");
+                startActivity(intent);
             }
         });
     }

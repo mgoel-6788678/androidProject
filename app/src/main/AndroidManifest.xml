@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Evento">
         <activity android:name=".ParticipantsDashboadActivity"></activity>
-        <activity android:name=".VolunteersLoginActivity" />
         <activity android:name=".ParticipantsLoginActiviy" />
         <activity android:name=".MainActivity">
             <intent-filter>

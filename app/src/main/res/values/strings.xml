@@ -5,9 +5,6 @@
     <string name="volunteers">Volunteers</string>
     <string name="organizers">Organizers</string>
 
-    <string name="login_participants">Login as Participants</string>
-    <string name="login_volunteers">Login as Volunteers</string>
-    <string name="signup_participants">Sign Up as Participants</string>
     <string name="login">Login</string>
     <string name="signup">SignUp</string>
     <string name="already_account">Already Registered?</string>

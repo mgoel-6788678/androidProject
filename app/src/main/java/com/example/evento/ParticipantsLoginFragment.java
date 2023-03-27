@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,6 +35,9 @@ public class ParticipantsLoginFragment extends Fragment {
         // Getting ARGUMENTS -
         Bundle mBundle = getArguments();
         String Role = mBundle.getString("Role");
+
+        TextView login_role = view.findViewById(R.id.Login_Role);
+        login_role.setText("Login as "+Role);
 
         Button login_participants = view.findViewById(R.id.login_participants_button);
 
