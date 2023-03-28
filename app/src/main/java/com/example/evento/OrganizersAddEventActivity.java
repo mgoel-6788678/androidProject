@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -20,6 +21,10 @@ public class OrganizersAddEventActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_organizers_add_event);
+
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();;
+
+        String Email = mAuth.getCurrentUser().getEmail();
 
         event_name = findViewById(R.id.organizer_event_name);
         event_date = findViewById(R.id.organizer_event_date);
@@ -44,6 +49,9 @@ public class OrganizersAddEventActivity extends AppCompatActivity {
                 DatabaseReference node = db.getReference("Events");
 
                 node.child(Event_name).setValue(new_event);
+                Users me = new Users(Email);
+                node = db.getReference("Events").child(Event_name);
+                node.child("Organizers").setValue(me);
 
                 Toast.makeText(OrganizersAddEventActivity.this,"Event Create Successfully", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(OrganizersAddEventActivity.this, OrganizersDashboardActivity.class);
