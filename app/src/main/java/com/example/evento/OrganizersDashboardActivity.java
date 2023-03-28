@@ -10,27 +10,36 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ParticipantsDashboadActivity extends AppCompatActivity {
+public class OrganizersDashboardActivity extends AppCompatActivity {
 
-    Button Logout;
+    Button Logout, Add_event;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_participants_dashboad);
+        setContentView(R.layout.activity_organizers_dashboard);
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();;
 
         String Email = mAuth.getCurrentUser().getEmail();
 
-        TextView participant_email = findViewById(R.id.participant_email_textView);
+        TextView participant_email = findViewById(R.id.organizers_email_textView);
         participant_email.setText("Welcome "+Email);
 
-        Logout = findViewById(R.id.participants_logout);
+        Logout = findViewById(R.id.organizers_logout);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent new_intent = new Intent(ParticipantsDashboadActivity.this, MainActivity.class);
+                Intent new_intent = new Intent(OrganizersDashboardActivity.this, MainActivity.class);
+                startActivity(new_intent);
+            }
+        });
+
+        Add_event = findViewById(R.id.organizers_add_event);
+        Add_event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent new_intent = new Intent(OrganizersDashboardActivity.this, OrganizersAddEventActivity.class);
                 startActivity(new_intent);
             }
         });

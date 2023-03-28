@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,10 +20,15 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+
 public class ParticipantsLoginFragment extends Fragment {
 
     TextInputLayout p_email, p_pass;
     private FirebaseAuth mAuth;
+
+    ProgressBar login_progress_bar ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,6 +38,8 @@ public class ParticipantsLoginFragment extends Fragment {
 
         p_email = (TextInputLayout) view.findViewById(R.id.participants_login_email);
         p_pass = (TextInputLayout) view.findViewById(R.id.participants_login_password);
+        login_progress_bar = view.findViewById(R.id.login_prgress_bar);
+        login_progress_bar.setVisibility(INVISIBLE);
         // Getting ARGUMENTS -
         Bundle mBundle = getArguments();
         String Role = mBundle.getString("Role");
@@ -44,6 +52,7 @@ public class ParticipantsLoginFragment extends Fragment {
         login_participants.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                login_progress_bar.setVisibility(VISIBLE);
                 String email2 = p_email.getEditText().getText().toString();
                 String pass2 = p_pass.getEditText().getText().toString();
                 mAuth = FirebaseAuth.getInstance();
@@ -53,9 +62,15 @@ public class ParticipantsLoginFragment extends Fragment {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Intent intent = new Intent(getActivity(), ParticipantsDashboadActivity.class);
-                                    intent.putExtra("Email",mAuth.getCurrentUser().getEmail());
-                                    startActivity(intent);
+                                    login_progress_bar.setVisibility(INVISIBLE);
+                                    if(Role.equals("Participants")){
+                                        Intent intent = new Intent(getActivity(), ParticipantsDashboadActivity.class);
+                                        startActivity(intent);
+                                    }
+                                    else{
+                                        Intent intent = new Intent(getActivity(), OrganizersDashboardActivity.class);
+                                        startActivity(intent);
+                                    }
                                 } else {
                                     p_email.getEditText().setText("");
                                     p_pass.getEditText().setText("");

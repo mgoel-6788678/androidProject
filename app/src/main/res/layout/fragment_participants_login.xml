@@ -64,6 +64,12 @@
             android:layout_marginTop="20dp"
             android:text="@string/login"/>
 
+        <ProgressBar
+            android:id="@+id/login_prgress_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </FrameLayout>

@@ -18,6 +18,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class ParticipantsSignupFragment extends Fragment {
@@ -56,6 +58,16 @@ public class ParticipantsSignupFragment extends Fragment {
                                 if (task.isSuccessful()) {
                                     p_email.getEditText().setText("");
                                     p_pass.getEditText().setText("");
+
+                                    String uid = mAuth.getCurrentUser().getUid();
+                                    Users user = new Users(email2);
+
+                                    // Firebase db
+                                    FirebaseDatabase db = FirebaseDatabase.getInstance();
+                                    DatabaseReference node = db.getReference("Users").child(Role);
+
+                                    node.child(uid).setValue(user);
+
                                     Toast.makeText(getActivity(),"Registered Successfully", Toast.LENGTH_LONG).show();
                                 } else {
                                     p_email.getEditText().setText("");
