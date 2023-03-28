@@ -67,6 +67,10 @@ public class ParticipantsLoginFragment extends Fragment {
                                         Intent intent = new Intent(getActivity(), ParticipantsDashboadActivity.class);
                                         startActivity(intent);
                                     }
+                                    else if(Role.equals("Volunteers")){
+                                        Intent intent = new Intent(getActivity(), VolunteersDashboardActivity.class);
+                                        startActivity(intent);
+                                    }
                                     else{
                                         Intent intent = new Intent(getActivity(), OrganizersDashboardActivity.class);
                                         startActivity(intent);

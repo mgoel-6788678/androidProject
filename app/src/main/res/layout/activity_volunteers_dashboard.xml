@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ParticipantsDashboadActivity"
+    tools:context=".VolunteersDashboardActivity"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -12,26 +12,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/participant_dashboard"
+        android:text="@string/volunteer_dashboard"
         android:textSize="25dp"
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/participant_email_textView"
+        android:id="@+id/volunteer_email_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25dp"
         android:layout_marginTop="20dp"/>
 
     <Button
-        android:id="@+id/participants_show_events"
+        android:id="@+id/volunteer_show_events"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/participant_show_events"
+        android:text="@string/volunteer_show_events"
         android:layout_marginTop="20dp"/>
 
     <Button
-        android:id="@+id/participants_logout"
+        android:id="@+id/volunteer_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/logout"

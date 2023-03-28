@@ -10,6 +10,7 @@
     <string name="already_account">Already Registered?</string>
     <string name="participant_dashboard">Participant Dashboard</string>
     <string name="organizer_dashboard">Organizers Dashboard</string>
+    <string name="volunteer_dashboard">Volunteer Dashboard</string>
     <string name="organizer_create_event">Create an Event</string>
     <string name="organizer_create">Create</string>
     <string name="logout">Logout</string>
@@ -18,4 +19,8 @@
     <string name="event_time">Event Time</string>
     <string name="event_desc">Event Description</string>
     <string name="event_loc">Event Location</string>
+    <string name="participant_show_events">Participate in Events</string>
+    <string name="organizer_show_events">Show Ongoing Events</string>
+    <string name="volunteer_show_events">Volunteer in Events</string>
+    <string name="ongoing_events">Ongoing Events</string>
 </resources>

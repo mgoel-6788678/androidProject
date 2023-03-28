@@ -10,36 +10,36 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ParticipantsDashboadActivity extends AppCompatActivity {
+public class VolunteersDashboardActivity extends AppCompatActivity {
 
     Button Logout, Show_events;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_participants_dashboad);
+        setContentView(R.layout.activity_volunteers_dashboard);
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();;
 
         String Email = mAuth.getCurrentUser().getEmail();
 
-        TextView participant_email = findViewById(R.id.participant_email_textView);
+        TextView participant_email = findViewById(R.id.volunteer_email_textView);
         participant_email.setText("Welcome "+Email);
 
-        Logout = findViewById(R.id.participants_logout);
+        Logout = findViewById(R.id.volunteer_logout);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent new_intent = new Intent(ParticipantsDashboadActivity.this, MainActivity.class);
+                Intent new_intent = new Intent(VolunteersDashboardActivity.this, MainActivity.class);
                 startActivity(new_intent);
             }
         });
 
-        Show_events = findViewById(R.id.participants_show_events);
+        Show_events = findViewById(R.id.volunteer_show_events);
         Show_events.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent new_intent = new Intent(ParticipantsDashboadActivity.this, ShowEventsActivity.class);
+                Intent new_intent = new Intent(VolunteersDashboardActivity.this, ShowEventsActivity.class);
                 new_intent.putExtra("Role","Participants");
                 startActivity(new_intent);
 

@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class OrganizersDashboardActivity extends AppCompatActivity {
 
-    Button Logout, Add_event;
+    Button Logout, Add_event, Show_events;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +41,17 @@ public class OrganizersDashboardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent new_intent = new Intent(OrganizersDashboardActivity.this, OrganizersAddEventActivity.class);
                 startActivity(new_intent);
+            }
+        });
+
+        Show_events = findViewById(R.id.organizers_show_events);
+        Show_events.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent new_intent = new Intent(OrganizersDashboardActivity.this, ShowEventsActivity.class);
+                new_intent.putExtra("Role","Participants");
+                startActivity(new_intent);
+
             }
         });
 

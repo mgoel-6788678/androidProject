@@ -31,6 +31,13 @@
         android:layout_marginTop="20dp"/>
 
     <Button
+        android:id="@+id/organizers_show_events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/organizer_show_events"
+        android:layout_marginTop="20dp"/>
+
+    <Button
         android:id="@+id/organizers_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
