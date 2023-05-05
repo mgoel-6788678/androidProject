@@ -13,29 +13,22 @@
         android:theme="@style/Theme.Evento">
         <activity
             android:name=".PayWall"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
         <activity android:name=".VolunteersDashboardActivity" />
         <activity android:name=".ShowEventsActivity" />
         <activity android:name=".OrganizersAddEventActivity" />
         <activity android:name=".OrganizersDashboardActivity" />
         <activity android:name=".ParticipantsDashboadActivity" />
         <activity android:name=".ParticipantsLoginActiviy" />
-        <activity android:name=".MainActivity"
-            android:exported="true"/>
-<!--        <activity-->
-<!--            android:name=".MainActivity"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
