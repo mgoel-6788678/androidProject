@@ -1,5 +1,6 @@
 package com.example.evento;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -12,12 +13,15 @@ import android.widget.Toast;
 
 import dev.shreyaspatil.easyupipayment.EasyUpiPayment;
 import dev.shreyaspatil.easyupipayment.exception.AppNotFoundException;
+import dev.shreyaspatil.easyupipayment.listener.PaymentStatusListener;
+import dev.shreyaspatil.easyupipayment.model.TransactionDetails;
 
-public class PayWall extends AppCompatActivity {
-
+public class PayWall extends AppCompatActivity implements PaymentStatusListener {
     EditText amount;
     EditText Desc;
     Button pay;
+
+    EasyUpiPayment payment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +49,8 @@ public class PayWall extends AppCompatActivity {
                     .setTransactionId(String.valueOf(System.currentTimeMillis()))
                     .setTransactionRefId(String.valueOf(System.currentTimeMillis()))
                     .setPayeeMerchantCode("12345");
-            EasyUpiPayment payment = builder.build();
+            payment = builder.build();
+            payment.setPaymentStatusListener(this);
             payment.startPayment();
         } catch (AppNotFoundException e) {
             Log.e("Payment error", "No app found");
@@ -53,5 +58,22 @@ public class PayWall extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onTransactionCancelled() {
+        Toast.makeText(this, "Transaction cancelled", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onTransactionCompleted(@NonNull TransactionDetails transactionDetails) {
+        Toast.makeText(this, "Transaction Completed", Toast.LENGTH_SHORT).show();
+        Log.d("Details", transactionDetails.toString());
+    }
+
+    @Override
+    public void onDestroy() {
+        payment.removePaymentStatusListener();
+        super.onDestroy();
     }
 }
