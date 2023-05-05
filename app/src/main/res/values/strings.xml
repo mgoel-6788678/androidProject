@@ -23,4 +23,9 @@
     <string name="organizer_show_events">Show Ongoing Events</string>
     <string name="volunteer_show_events">Volunteer in Events</string>
     <string name="ongoing_events">Ongoing Events</string>
+
+
+    <string name="amount">Enter Amount to Pay</string>
+    <string name="desc">Event Name</string>
+    <string name="pay">Pay</string>
 </resources>
