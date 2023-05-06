@@ -28,4 +28,6 @@
     <string name="amount">Enter Amount to Pay</string>
     <string name="desc">Event Name</string>
     <string name="pay">Pay</string>
+
+    <string name="splashDesc">The icon of the app on the splash screen</string>
 </resources>
