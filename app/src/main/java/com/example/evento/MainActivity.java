@@ -1,6 +1,7 @@
 package com.example.evento;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Fragment fragment = new MapFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment).commit();
 
         Participants = (Button) findViewById(R.id.Participants);
         Volunteers = (Button) findViewById(R.id.Volunteers);
