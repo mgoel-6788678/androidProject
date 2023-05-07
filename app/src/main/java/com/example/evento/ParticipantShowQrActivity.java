@@ -48,7 +48,7 @@ public class ParticipantShowQrActivity extends AppCompatActivity {
             // BIT MAP on Image View -
             qr_code.setImageBitmap(bitmap);
 
-            
+
 
         } catch (WriterException e) {
             e.printStackTrace();
