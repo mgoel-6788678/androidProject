@@ -13,15 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Evento">
+        <activity android:name=".ParticipantShowQrActivity"></activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAWt_wDdbljTHcEhbEYWhINFtWwNYl2Yic" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -33,7 +37,7 @@
         <activity android:name=".OrganizersDashboardActivity" />
         <activity android:name=".ParticipantsDashboadActivity" />
         <activity android:name=".ParticipantsLoginActiviy" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
