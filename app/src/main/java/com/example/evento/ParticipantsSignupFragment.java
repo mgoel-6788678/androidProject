@@ -33,8 +33,8 @@ public class ParticipantsSignupFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_participants_signup, container, false);
 
-        p_email = (TextInputLayout) view.findViewById(R.id.participants_signup_email);
-        p_pass = (TextInputLayout) view.findViewById(R.id.participants_signup_password);
+        p_email = view.findViewById(R.id.participants_signup_email);
+        p_pass = view.findViewById(R.id.participants_signup_password);
         // Getting ARGUMENTS -
         Bundle mBundle = getArguments();
         String Role = mBundle.getString("Role");

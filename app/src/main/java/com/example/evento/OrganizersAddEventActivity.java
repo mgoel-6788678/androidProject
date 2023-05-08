@@ -22,7 +22,7 @@ public class OrganizersAddEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_organizers_add_event);
 
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();;
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
         String Email = mAuth.getCurrentUser().getEmail();
 

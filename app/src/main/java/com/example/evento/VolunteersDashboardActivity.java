@@ -18,7 +18,7 @@ public class VolunteersDashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volunteers_dashboard);
 
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();;
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
         String Email = mAuth.getCurrentUser().getEmail();
 

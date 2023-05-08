@@ -34,5 +34,9 @@
 
     <string name="splashDesc">The icon of the app on the splash screen</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="chatbox">Chatbox</string>
+    <string name="send_button">Send</string>
+
     <string name="donate">Donate</string>
 </resources>
