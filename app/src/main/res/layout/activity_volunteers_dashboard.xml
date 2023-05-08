@@ -38,19 +38,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/volunteer_dashboard"-->
-<!--            android:textSize="25dp"-->
-<!--            android:textStyle="bold"/>-->
-
-        <TextView
-            android:id="@+id/volunteer_email_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:layout_marginTop="20dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/volunteer_show_events"
