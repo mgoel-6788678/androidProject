@@ -20,11 +20,6 @@ public class OrganizersDashboardActivity extends AppCompatActivity {
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
-        String Email = mAuth.getCurrentUser().getEmail();
-
-        TextView participant_email = findViewById(R.id.organizers_email_textView);
-        participant_email.setText("Welcome "+Email);
-
         Logout = findViewById(R.id.organizers_logout);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
