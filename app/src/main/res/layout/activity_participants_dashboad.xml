@@ -16,6 +16,16 @@
         android:textSize="25dp"
         android:textStyle="bold"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/chatBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:layout_gravity="end"
+    app:srcCompat="@android:drawable/sym_action_chat"
+    android:focusable="true"
+    android:contentDescription="@string/chatbox" />
+
     <TextView
         android:id="@+id/participant_email_textView"
         android:layout_width="wrap_content"

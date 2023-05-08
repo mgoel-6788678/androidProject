@@ -39,15 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/organizers" />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/chatBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:layout_gravity="end"
-        app:srcCompat="@android:drawable/sym_action_chat"
-        android:focusable="true"
-        android:contentDescription="@string/chatbox" />
+
 
 
     <FrameLayout
