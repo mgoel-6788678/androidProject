@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ParticipantsDashboadActivity extends AppCompatActivity {
 
-    Button Logout, Show_events;
+    Button Logout, Show_events, Show_qr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +41,16 @@ public class ParticipantsDashboadActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent new_intent = new Intent(ParticipantsDashboadActivity.this, ShowEventsActivity.class);
                 new_intent.putExtra("Role","Participants");
+                startActivity(new_intent);
+
+            }
+        });
+
+        Show_qr = findViewById(R.id.participants_qr_code);
+        Show_qr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent new_intent = new Intent(ParticipantsDashboadActivity.this, ParticipantShowQrActivity.class);
                 startActivity(new_intent);
 
             }

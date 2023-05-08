@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class OrganizersDashboardActivity extends AppCompatActivity {
 
-    Button Logout, Add_event, Show_events;
+    Button Logout, Add_event, Show_events, Mark_attendance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,5 +55,15 @@ public class OrganizersDashboardActivity extends AppCompatActivity {
             }
         });
 
+
+        Mark_attendance = findViewById(R.id.organizers_mark_attendance);
+        Mark_attendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent new_intent = new Intent(OrganizersDashboardActivity.this, QrScannerActivity.class);
+                startActivity(new_intent);
+
+            }
+        });
     }
 }
