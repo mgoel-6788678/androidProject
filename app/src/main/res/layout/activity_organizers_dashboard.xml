@@ -1,55 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrganizersDashboardActivity"
-    android:gravity="center"
-    android:orientation="vertical">
+    tools:context=".OrganizersDashboardActivity">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="451dp"
+        android:layout_height="848dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_page__3_" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/organizer_dashboard"
-        android:textSize="25dp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/organizers_email_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:layout_marginTop="20dp"/>
-
-    <Button
-        android:id="@+id/organizers_add_event"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/organizer_create_event"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
 
-    <Button
-        android:id="@+id/organizers_show_events"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/organizer_show_events"
-        android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/organizers_add_event"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/black_button"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
 
-    <Button
-        android:id="@+id/organizers_mark_attendance"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/mark_attendance"
-        android:layout_marginTop="20dp"/>
+            android:text="@string/organizer_create_event" />
 
-    <Button
-        android:id="@+id/organizers_logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/logout"
-        android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/organizers_show_events"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/black_button"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:text="@string/organizer_show_events" />
+
+        <Button
+            android:id="@+id/organizers_mark_attendance"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/black_button"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:text="@string/mark_attendance" />
+
+        <Button
+            android:id="@+id/organizers_logout"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/black_button"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:text="@string/logout" />
+    </LinearLayout>
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
