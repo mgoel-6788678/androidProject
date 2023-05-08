@@ -27,7 +27,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Participants"
             style="@android:style/Widget.Button"
             android:layout_width="match_parent"
@@ -37,11 +37,11 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/background_btn_intro2"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:textSize="25dp"
             android:text="@string/participants" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Volunteers"
             style="@android:style/Widget.Button"
             android:layout_width="match_parent"
@@ -51,11 +51,11 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/background_btn_intro2"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:textSize="25dp"
             android:text="@string/volunteers" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Organizers"
             style="@android:style/Widget.Button"
             android:layout_width="match_parent"
@@ -65,7 +65,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/background_btn_intro2"
-            android:textColor="#fff"
+            android:textColor="#000"
             android:textSize="25dp"
             android:text="@string/organizers" />
 
