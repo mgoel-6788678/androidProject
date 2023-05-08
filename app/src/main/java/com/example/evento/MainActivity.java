@@ -31,20 +31,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Fragment fragment = new MapFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment).commit();
+//        Fragment fragment = new MapFragment();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment).commit();
 
         Participants = findViewById(R.id.Participants);
         Volunteers = findViewById(R.id.Volunteers);
         Organizers = findViewById(R.id.Organizers);
-        chatButton = findViewById(R.id.chatBox);
-        chatButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ChatBoxFragment chatboxFragment = new ChatBoxFragment();
-                chatboxFragment.show(getSupportFragmentManager(), "chatbox");
-            }
-        });
+//        chatButton = findViewById(R.id.chatBox);
+//        chatButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ChatBoxFragment chatboxFragment = new ChatBoxFragment();
+//                chatboxFragment.show(getSupportFragmentManager(), "chatbox");
+//            }
+//        });
 
         Participants.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public static class ChatBoxFragment extends DialogFragment {
-        private EditText chatInput;
-        private TextView chatHistory;
+//    public static class ChatBoxFragment extends DialogFragment {
+//        private EditText chatInput;
+//        private TextView chatHistory;
 
 //        @NonNull
 //        @Override
@@ -96,41 +96,41 @@ public class MainActivity extends AppCompatActivity {
 //
 //            return dialog;
 //        }
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_chat_box, container, false);
-            // Add logic for the chatbox UI elements here
-            // Set the layout parameters of the root view to fill the available space
-            Window window = Objects.requireNonNull(getDialog()).getWindow();
-            window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-
-            // Get references to the UI elements
-            chatInput = view.findViewById(R.id.chat_input);
-            chatHistory = view.findViewById(R.id.chat_history);
-
-            // Set up the send button
-            Button sendButton = view.findViewById(R.id.send_button);
-            sendButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // Get the text from the chat input field
-                    String message = chatInput.getText().toString().trim();
-
-                    if (!message.isEmpty()) {
-                        // Append the message to the chat history
-                        chatHistory.append("You: " + message + "\n");
-
-                        // Clear the chat input field
-                        chatInput.setText("");
-
-                        // Send the message to the chat server (or handle it locally)
-                        // TODO: Implement chat server logic here
-                    }
-                }
-            });
-
-            return view;
-        }
-    }
+//        @Override
+//        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                                 Bundle savedInstanceState) {
+//            View view = inflater.inflate(R.layout.fragment_chat_box, container, false);
+//            // Add logic for the chatbox UI elements here
+//            // Set the layout parameters of the root view to fill the available space
+//            Window window = Objects.requireNonNull(getDialog()).getWindow();
+//            window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+//
+//            // Get references to the UI elements
+//            chatInput = view.findViewById(R.id.chat_input);
+//            chatHistory = view.findViewById(R.id.chat_history);
+//
+//            // Set up the send button
+//            Button sendButton = view.findViewById(R.id.send_button);
+//            sendButton.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    // Get the text from the chat input field
+//                    String message = chatInput.getText().toString().trim();
+//
+//                    if (!message.isEmpty()) {
+//                        // Append the message to the chat history
+//                        chatHistory.append("You: " + message + "\n");
+//
+//                        // Clear the chat input field
+//                        chatInput.setText("");
+//
+//                        // Send the message to the chat server (or handle it locally)
+//                        // TODO: Implement chat server logic here
+//                    }
+//                }
+//            });
+//
+//            return view;
+//        }
+//    }
 }
