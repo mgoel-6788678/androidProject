@@ -18,7 +18,7 @@ public class ParticipantsDashboadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_participants_dashboad);
 
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();;
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
         String Email = mAuth.getCurrentUser().getEmail();
 

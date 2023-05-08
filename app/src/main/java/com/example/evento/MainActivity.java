@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = new MapFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment).commit();
 
-        Participants = (Button) findViewById(R.id.Participants);
-        Volunteers = (Button) findViewById(R.id.Volunteers);
-        Organizers = (Button) findViewById(R.id.Organizers);
+        Participants = findViewById(R.id.Participants);
+        Volunteers = findViewById(R.id.Volunteers);
+        Organizers = findViewById(R.id.Organizers);
 
         Participants.setOnClickListener(new View.OnClickListener() {
             @Override

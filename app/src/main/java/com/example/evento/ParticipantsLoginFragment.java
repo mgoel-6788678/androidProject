@@ -36,8 +36,8 @@ public class ParticipantsLoginFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_participants_login, container, false);
 
-        p_email = (TextInputLayout) view.findViewById(R.id.participants_login_email);
-        p_pass = (TextInputLayout) view.findViewById(R.id.participants_login_password);
+        p_email = view.findViewById(R.id.participants_login_email);
+        p_pass = view.findViewById(R.id.participants_login_password);
         login_progress_bar = view.findViewById(R.id.login_prgress_bar);
         login_progress_bar.setVisibility(INVISIBLE);
         // Getting ARGUMENTS -
