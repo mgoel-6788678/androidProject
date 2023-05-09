@@ -22,9 +22,6 @@ public class VolunteersDashboardActivity extends AppCompatActivity {
 
         String Email = mAuth.getCurrentUser().getEmail();
 
-        TextView participant_email = findViewById(R.id.volunteer_email_textView);
-        participant_email.setText("Welcome "+Email);
-
         Logout = findViewById(R.id.volunteer_logout);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override

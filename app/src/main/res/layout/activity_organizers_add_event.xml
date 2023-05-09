@@ -113,7 +113,7 @@
             android:layout_marginRight="10dp"
             android:orientation="vertical">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/organizers_create"
                 style="@android:style/Widget.Button"
                 android:layout_width="329dp"

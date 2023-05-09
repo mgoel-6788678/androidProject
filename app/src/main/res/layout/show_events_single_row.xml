@@ -10,15 +10,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="15dp"
         android:orientation="vertical">
     <TextView
         android:id="@+id/show_event_single_row_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textStyle="bold"
-        android:textSize = "20sp"
-        android:text="TextView" />
+        android:textSize = "30sp"
+        android:text="@string/valueText" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,8 +32,8 @@
         android:layout_height="wrap_content"
         android:layout_weight = "1"
         android:textStyle="bold"
-        android:textSize = "15dp"
-        android:text="TextView" />
+        android:textSize = "20sp"
+        android:text="@string/valueText" />
 
         <TextView
             android:id="@+id/show_event_single_row_time"
@@ -41,8 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_weight = "1"
             android:textStyle="bold"
-            android:textSize = "15dp"
-            android:text="TextView" />
+            android:textSize = "20sp"
+            android:text="@string/valueText" />
 
     </LinearLayout>
 </LinearLayout>

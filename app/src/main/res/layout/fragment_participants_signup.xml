@@ -6,6 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ParticipantsSignupFragment">
 
+    <ImageView
+        android:id="@+id/coloredBg"
+        android:layout_width="451dp"
+        android:layout_height="848dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_page__3_" />
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,27 +24,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="35dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:layout_margin="15dp"
-            android:id="@+id/Signup_role"
+            android:text="@string/signup"
+            android:textSize="40dp"
+            android:textColor="#fff"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColorHint="@color/black"
             android:hint="Enter your Email"
             android:id="@+id/participants_signup_email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="24sp"
                 android:inputType="textEmailAddress"/>
 
 
@@ -45,6 +52,9 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:hint="Enter Password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColorHint="@color/black"
             android:id="@+id/participants_signup_password"
             app:passwordToggleEnabled="true"
             android:layout_marginTop="20dp">
@@ -52,12 +62,17 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="24sp"
                 android:inputType="textPassword"/>
 
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/black_button"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            style="@android:style/Widget.Button"
             android:id="@+id/signup_participants_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,11 +81,11 @@
 
         <TextView
             android:layout_width="wrap_content"
+            android:textColor="#fff"
             android:layout_height="wrap_content"
             android:text="@string/already_account"
             android:layout_marginTop="30dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:textSize="20sp"
             android:id="@+id/already_registered" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
