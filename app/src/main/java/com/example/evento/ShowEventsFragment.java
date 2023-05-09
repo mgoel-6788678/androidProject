@@ -47,7 +47,7 @@ public class ShowEventsFragment extends Fragment {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Events"), EventsClass.class)
                         .build();
 
-        showEventsAdapter = new ShowEventsAdapter(options);
+        showEventsAdapter = new ShowEventsAdapter(options, (Clickable) getActivity());
         recyclerView.setAdapter(showEventsAdapter);
 
         return view;

@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class ShowEventsActivity extends AppCompatActivity {
+public class ShowEventsActivity extends AppCompatActivity implements Clickable{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +32,11 @@ public class ShowEventsActivity extends AppCompatActivity {
             new_transaction.add(R.id.show_events_container, mShowEventsFragment);
             new_transaction.commit();
         }
+    }
+
+    @Override
+    public void openEventDetails() {
+        Intent intent = new Intent(this, EventsDetailPage.class);
+        startActivity(intent);
     }
 }
