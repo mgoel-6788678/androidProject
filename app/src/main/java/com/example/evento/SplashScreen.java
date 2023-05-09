@@ -8,7 +8,7 @@ import android.os.Handler;
 
 public class SplashScreen extends AppCompatActivity {
 
-    final private static int SHIFT_TIMER = 5000;
+    final private static int SHIFT_TIMER = 2500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

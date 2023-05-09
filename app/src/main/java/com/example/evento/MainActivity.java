@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        Fragment fragment = new MapFragment();
-//        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment).commit();
+        Fragment fragment = new MapFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment).commit();
 
         Participants = findViewById(R.id.Participants);
         Volunteers = findViewById(R.id.Volunteers);

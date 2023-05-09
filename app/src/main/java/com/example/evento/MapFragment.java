@@ -60,12 +60,12 @@ public class MapFragment extends Fragment {
                 // below line is use to move our camera to the specific location.
                 googleMap.moveCamera(CameraUpdateFactory.newLatLng(locationArrayList.get(i)));
             }
-            googleMap.setOnMapClickListener(latLng -> {
-                markerOptions.position(latLng);
-                markerOptions.title(latLng.latitude + ", " + latLng.longitude);
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,20));
-                googleMap.addMarker(markerOptions);
-            });
+//            googleMap.setOnMapClickListener(latLng -> {
+//                markerOptions.position(latLng);
+//                markerOptions.title(latLng.latitude + ", " + latLng.longitude);
+//                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,20));
+//                googleMap.addMarker(markerOptions);
+//            });
         });
         return view;
     }
