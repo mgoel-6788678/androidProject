@@ -39,9 +39,6 @@ public class ParticipantsDashboadActivity extends AppCompatActivity {
 
         String Email = mAuth.getCurrentUser().getEmail();
 
-        TextView participant_email = findViewById(R.id.participant_email_textView);
-        participant_email.setText("Welcome "+Email);
-
         Logout = findViewById(R.id.participants_logout);
         chatButton = findViewById(R.id.chatBox);
         chatButton.setOnClickListener(new View.OnClickListener() {

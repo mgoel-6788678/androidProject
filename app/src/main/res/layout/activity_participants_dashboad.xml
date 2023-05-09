@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,14 +9,34 @@
     android:orientation="vertical">
 
 
+    <ImageView
+        android:id="@+id/coloredBg"
+        android:layout_width="451dp"
+        android:layout_height="848dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_page__3_" />
+
     <TextView
+        android:id="@+id/heading_Participants"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="200dp"
+        android:textColor="#fff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/participant_dashboard"
-        android:textSize="25dp"
-        android:textStyle="bold"/>
+        android:textSize="40sp"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="35dp"
     android:id="@+id/chatBox"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -26,28 +46,41 @@
     android:focusable="true"
     android:contentDescription="@string/chatbox" />
 
-    <TextView
-        android:id="@+id/participant_email_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:layout_marginTop="20dp"/>
-
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_constraintTop_toBottomOf="@id/heading_Participants"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@android:style/Widget.Button"
+        android:layout_margin="20dp"
+        android:background="@drawable/black_button"
+        android:textColor="#fff"
+        android:textSize="24sp"
         android:id="@+id/participants_show_events"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/participant_show_events"
         android:layout_marginTop="20dp"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_constraintTop_toBottomOf="@id/participants_show_events"
+        style="@android:style/Widget.Button"
+        android:layout_margin="20dp"
+        android:textSize="24sp"
+        android:background="@drawable/black_button"
+        android:textColor="#fff"
         android:id="@+id/participants_qr_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/show_qr"
         android:layout_marginTop="20dp"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_constraintTop_toBottomOf="@id/participants_qr_code"
+        style="@android:style/Widget.Button"
+        android:layout_margin="20dp"
+        android:textSize="24sp"
+        android:background="@drawable/black_button"
+        android:textColor="#fff"
         android:id="@+id/participants_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,4 +88,4 @@
         android:layout_marginTop="20dp"/>
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

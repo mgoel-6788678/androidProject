@@ -39,9 +39,6 @@ public class ParticipantsSignupFragment extends Fragment {
         Bundle mBundle = getArguments();
         String Role = mBundle.getString("Role");
 
-        TextView signup_role = view.findViewById(R.id.Signup_role);
-        signup_role.setText("Sign Up as "+Role);
-
         Button signup = view.findViewById(R.id.signup_participants_button);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override

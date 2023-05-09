@@ -25,7 +25,7 @@ public class ChatClass implements Serializable {
         }
 
         public String toString() {
-            return UserName + " " + Content + "\n";
+            return UserName + ":" + Content + "\n";
         }
     }
 

@@ -39,4 +39,10 @@
     <string name="send_button">Send</string>
 
     <string name="donate">Donate</string>
+
+    <string name="valueText">TextView</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <string name="background_image">background image</string>
+    <string name="chat_input">Chat input</string>
 </resources>
