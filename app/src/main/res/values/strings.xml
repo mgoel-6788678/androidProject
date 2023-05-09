@@ -45,4 +45,10 @@
     <string name="enter_your_email">Enter your Email</string>
     <string name="background_image">background image</string>
     <string name="chat_input">Chat input</string>
+    <string name="register_fee">Register Fee</string>
+    <string name="register">Register</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="venue">Venue</string>
+    <string name="event_description">Event Description</string>
+    <string name="event_name1">Event Name</string>
 </resources>

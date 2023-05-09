@@ -13,8 +13,11 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 public class ShowEventsAdapter extends FirebaseRecyclerAdapter <EventsClass, ShowEventsAdapter.ShowEventsViewHolder>{
 
-    public ShowEventsAdapter(@NonNull FirebaseRecyclerOptions<EventsClass> options) {
+    Clickable openEventDetailPage;
+
+    public ShowEventsAdapter(@NonNull FirebaseRecyclerOptions<EventsClass> options, Clickable c) {
         super(options);
+        openEventDetailPage = c;
     }
 
     @Override
@@ -32,7 +35,6 @@ public class ShowEventsAdapter extends FirebaseRecyclerAdapter <EventsClass, Sho
     }
 
     class ShowEventsViewHolder extends RecyclerView.ViewHolder{
-
         TextView heading;
         TextView date;
         TextView time;
@@ -41,6 +43,13 @@ public class ShowEventsAdapter extends FirebaseRecyclerAdapter <EventsClass, Sho
             heading = itemView.findViewById(R.id.show_event_single_row_heading);
             date = itemView.findViewById(R.id.show_event_single_row_date);
             time = itemView.findViewById(R.id.show_event_single_row_time);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openEventDetailPage.openEventDetails();
+                }
+            });
         }
     }
 }
