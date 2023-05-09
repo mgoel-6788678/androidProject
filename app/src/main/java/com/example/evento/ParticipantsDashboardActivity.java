@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Objects;
 
-public class ParticipantsDashboadActivity extends AppCompatActivity {
+public class ParticipantsDashboardActivity extends AppCompatActivity {
 
     Button Logout, Show_events, Show_qr;
     private FloatingActionButton chatButton;
@@ -52,7 +52,7 @@ public class ParticipantsDashboadActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent new_intent = new Intent(ParticipantsDashboadActivity.this, MainActivity.class);
+                Intent new_intent = new Intent(ParticipantsDashboardActivity.this, MainActivity.class);
                 startActivity(new_intent);
             }
         });
@@ -61,7 +61,7 @@ public class ParticipantsDashboadActivity extends AppCompatActivity {
         Show_events.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent new_intent = new Intent(ParticipantsDashboadActivity.this, ShowEventsActivity.class);
+                Intent new_intent = new Intent(ParticipantsDashboardActivity.this, ShowEventsActivity.class);
                 new_intent.putExtra("Role","Participants");
                 startActivity(new_intent);
 
@@ -72,7 +72,7 @@ public class ParticipantsDashboadActivity extends AppCompatActivity {
         Show_qr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent new_intent = new Intent(ParticipantsDashboadActivity.this, ParticipantShowQrActivity.class);
+                Intent new_intent = new Intent(ParticipantsDashboardActivity.this, ParticipantShowQrActivity.class);
                 startActivity(new_intent);
 
             }

@@ -64,7 +64,7 @@ public class ParticipantsLoginFragment extends Fragment {
                                 if (task.isSuccessful()) {
                                     login_progress_bar.setVisibility(INVISIBLE);
                                     if(Role.equals("Participants")){
-                                        Intent intent = new Intent(getActivity(), ParticipantsDashboadActivity.class);
+                                        Intent intent = new Intent(getActivity(), ParticipantsDashboardActivity.class);
                                         startActivity(intent);
                                     }
                                     else if(Role.equals("Volunteers")){

@@ -40,7 +40,7 @@
         <activity android:name=".ShowEventsActivity" />
         <activity android:name=".OrganizersAddEventActivity" />
         <activity android:name=".OrganizersDashboardActivity" />
-        <activity android:name=".ParticipantsDashboadActivity" />
+        <activity android:name=".ParticipantsDashboardActivity" />
         <activity android:name=".ParticipantsLoginActiviy" />
         <activity android:name=".MainActivity" />
     </application>
